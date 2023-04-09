@@ -771,7 +771,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 				if (mentionByTag[0] === botNumber) return reply(`Tidak bisa bermain dengan bot!`)
                 if (mentionByTag[0] === sender) return reply(`Sad amat main ama diri sendiri`)
                      var hadiah = randomNomor(100, 150)
-				     mentions(monospace(`@${sender.split('@')[0]} menantang @${mentionByTag[0].split('@')[0]} untuk bermain TicTacToe\n\nKirim (Y/N) untuk bermain\n\nHadiah : ${hadiah} balance`), [sender, mentionByTag[0]], false)
+				     mentions(monospace(`@${sender.split('@')[0]} menantang @${mentionByTag[0].split('@')[0]} untuk bermain TicTacToe\n\nKirim Y untuk menerima tantangan dan kirim T untuk menolak Tantangan\n\nHadiah : ${hadiah} balance`), [sender, mentionByTag[0]], false)
                      tictactoe.push({
                         id: from,
                         status: null,
